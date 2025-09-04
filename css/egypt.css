@@ -1,0 +1,132 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  padding: 40px;
+  /* background-image: url(./b30337d9d2f6cbfe20e679225f09a6b0.jpg);
+  background-size: 100% 100%;               
+  background-repeat: no-repeat;       
+  background-position: center top;     
+  background-attachment: scroll;       */
+
+ background: linear-gradient(to bottom left, #f6ebc0, #f1d09b);
+  animation: softGlow 20s ease infinite;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+@keyframes moveGlow {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(50px, 30px); }
+  100% { transform: translate(0, 0); }
+}
+
+    h1 {
+      font-size: 3em;
+      font-family: 'Great Vibes', cursive;
+      color: black;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: black;
+      margin-bottom: 30px;
+      font-family:cursive;
+    }
+
+    /* video {
+      max-width: 1000px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      outline: none;
+    } */
+
+    a {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 10px 20px;
+      background: #222;
+      color: black;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+
+    /* 10 img effects css */
+
+    .event-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* margin-bottom: 80px; */
+      flex-wrap: wrap;
+    }
+
+    .event-img {
+      flex: 1 1 400px;
+      max-width: 600px;
+      padding: 20px;
+      transition: transform 0.4s ease;
+    }
+
+    .event-img img {
+      width: 500px;
+      height: 400px;
+      border-radius: 15px;
+      transition: transform 0.6s ease, filter 0.6s ease, box-shadow 0.6s ease;
+      transform-style: preserve-3d;
+      transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+    }
+
+    .event-img:hover img {
+      transform: perspective(1000px) rotateY(12deg) rotateX(3deg) scale(1.04);
+      box-shadow: 0 30px 30px black;
+      filter: brightness(1.1);
+    }
+
+    .event-text {
+      flex: 1 1 400px;
+      max-width: 600px;
+      padding: 20px;
+      animation: slideIn 1s ease forwards;
+      opacity: 0;
+      transform: translateY(40px);
+    }
+
+    .event-row:nth-child(even) .event-text {
+      animation-delay: 0.3s;
+    }
+
+    .event-text h2 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.5em;
+      color: black;
+      margin-bottom: 10px;
+      position: relative;
+    }
+
+   
+
+    .event-text p {
+      color: black;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+  
+    @keyframes slideIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .event-row {
+        flex-direction: column;
+      }
+
+      .event-img, .event-text {
+        max-width: 90%;
+      }
+    }
+
+ 

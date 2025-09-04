@@ -1,0 +1,113 @@
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #fff9ec, #fff);
+      font-family: 'Cinzel', serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      background: url('../images/2151718092.jpg') no-repeat center;
+      background-size: cover;
+    }
+
+    .scroll-container {
+      
+      width: 600px;
+      height: 700px;
+      padding: 50px 40px;
+      box-shadow: 0 0 30px #eeb03e;
+      border-radius: 30px;
+      position: relative;
+      animation: fadeIn 1.2s ease-out;
+    }
+
+    h2 {
+      text-align: center;
+      color: whitesmoke;
+      font-size: 2.2em;
+      margin-bottom: 20px;
+      text-shadow: 0 0 6px #f0d9a4;
+    }
+
+    .scroll-container p.description {
+      font-size: 16px;
+      line-height: 1.7;
+      text-align: justify;
+      margin-bottom: 30px;
+      color: whitesmoke;
+    }
+
+    select, button {
+      width: 100%;
+      padding: 12px;
+      font-size: 1em;
+      margin: 12px 0;
+      border-radius: 8px;
+      border: 2px solid #deb75e;
+      background: #fffef4;
+      color: #3a2e18;
+      transition: all 0.3s ease;
+    }
+
+    select:hover, select:focus {
+      outline: none;
+      box-shadow: 0 0 12px #f1d09b;
+    }
+
+    button {
+      background: #deb75e;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 0 15px #f1d09b;
+    }
+
+    button:hover {
+      background: #caa03d;
+    }
+
+    .confirmation {
+      margin-top: 25px;
+      font-size: 1.1em;
+      text-align: center;
+      color: white;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: appear 0.8s forwards;
+    }
+
+    .confirmation.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes appear {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  
+    .btf{
+  display: flex;
+  justify-content: center;
+
+}
+
+.btf button a{
+  text-decoration: none;
+  color: white;
+}
+
+.back-to-home{
+  width: 160px;
+  height: 50px;
+  border-radius: 10px;
+  background-color:black ;
+}

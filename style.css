@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #000;
+  color: white;
+  scroll-behavior: smooth;
+  background: url('images/view-world-monument-celebrate-world-heritage-day\ \(3\).jpg') no-repeat center center/cover;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  z-index: 100;
+}
+
+.logo {
+  font-family: 'Great Vibes', cursive;
+  font-size: 32px;
+  color: white;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background: skyblue;
+  transition: all 0.3s ease;
+  transform-origin: left;
+}
+
+nav a:hover {
+  color: skyblue;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin: 4px 0;
+  border-radius: 2px;
+}
+
+.hero {
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 20px;
+  text-align: center;
+  font-family: 'Great Vibes', cursive;
+}
+
+.hero h1 {
+  font-size: 80px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+
+/* New Scroll Button Animation */
+.scroll-down {
+  background: black;
+  color: black;
+  background-color: whitesmoke;
+  border: none;
+  padding: 15px 30px;
+  font-size: 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+  transition: transform 0.3s ease;
+  font-family: 'Great Vibes', cursive;
+  /* opacity: 0;
+  transform: translateX(-60px);
+  animation: slideLeft 1s forwards 0.9s; */
+ 
+}
+
+
+.scroll-down:hover {
+  transform: scale(1.05);
+}
+
+/* Button Glow */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(106, 223, 241, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(240, 192, 64, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(240, 192, 64, 0);
+  }
+}
+
+/* Slide Animations */
+.slide-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  animation: slideLeft 1s forwards 0.3s;
+}
+
+.slide-right {
+  opacity: 0;
+  transform: translateX(60px);
+  animation: slideRight 1s forwards 0.6s;
+}
+
+
+
+@keyframes slideLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Fade-Zoom Scroll Animation */
+.fade-zoom {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.8s ease-out;
+}
+
+.fade-zoom.show {
+  opacity: 1;
+  transform: scale(1);
+}

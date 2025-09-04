@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Magical Museum Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/about.css">
+</head>
+
+<body>
+
+    <!-- 🌟 About the Website -->
+    <section class="about-website">
+        <h2>About This Magical Museum Website</h2>
+        <div class="about-wrapper">
+            <p> A magical digital gateway where the past comes alive. Our platform brings together the greatest
+                treasures of history, art, and culture into one immersive and interactive experience for visitors around
+                the world. Whether you're fascinated by the golden mysteries of Ancient Egypt, the elegance of
+                Renaissance paintings, or the vibrant traditions of India, our website is designed to let you explore it
+                all virtually, beautifully, and effortlessly.
+                Each section of Museum Explore has been carefully crafted with storytelling, animation, sound, and
+                interactive elements that allow you to feel like you're physically walking through legendary galleries
+                and sacred spaces. We believe museums are more than buildings they are living timelines. Here, every
+                artifact tells a story, every painting whispers history, and every visit feels personal. Our mission is
+                to make global heritage accessible and exciting to all. We blend design, technology, and education to
+                offer an elegant, user-friendly experience for students, teachers, families, and explorers of all ages.
+                Dive into 3D exhibits, uncover hidden facts, hear historical narrations, and enjoy real visitor reviews
+                all from the comfort of your screen.
+                Thank you for choosing Museum Explore. Step through the portal, open the book of time, and begin your
+                unforgettable journey through the wonders of the world
+            </p>
+        </div>
+    </section>
+
+    <!-- ✨ Visitor Reviews Section -->
+    <div id="visitor-r">
+        <h1>✨ Magical Museum Visitor Reviews</h1>
+
+        <div class="portal-container">
+            <div class="portal" onclick="openPortal(0)">🏺<br>Egyptian<br>Museum</div>
+            <div class="portal" onclick="openPortal(1)">🖼️<br>Louvre<br>Museum</div>
+            <div class="portal" onclick="openPortal(2)">🏯<br>Tokyo<br>India</div>
+            <div class="portal" onclick="openPortal(3)">🏛️<br>Pergamon<br>Museum</div>
+            <div class="portal" onclick="openPortal(4)">🕌<br>India<br>Museum</div>
+        </div>
+
+        <div id="museumContent" class="museum-info"></div>
+    </div>
+
+    <!-- 🌟 Footer Contact Info -->
+
+    <footer id="contact-p"
+        style="background: #fffdf7; padding: 60px 20px; text-align: center; border-top: 2px solid #f1d09b; box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.05); font-family: 'Roboto', sans-serif;">
+
+        <h2
+            style="font-family: 'Great Vibes', cursive; font-size: 2.5em; color: black; margin-bottom: 20px; text-shadow: 0 0 5px #f1d09b;">
+            ✨ Stay Connected with Museum Explore
+        </h2>
+
+        <p style="font-size: 18px; color: #333; max-width: 800px; margin: auto;">
+            Whether you’re a student, traveler, artist, or history enthusiast, we’d love to hear from you.
+            Get in touch with us to ask questions, book virtual group tours, or share your museum experience.
+        </p>
+
+        <div style="margin-top: 40px;">
+            <p style="font-size: 18px; color: #333;">
+                📍 <strong>Address:</strong> Magical Museum HQ, Timewalk Avenue, History City, World 10101
+            </p>
+            <p style="font-size: 18px; color: #333;">
+                ☎️ <strong>Phone:</strong> +91-9876543210
+            </p>
+            <p style="font-size: 18px; color: #333;">
+                ✉️ <strong>Email:</strong> contact@museumexplore.com
+            </p>
+            <p style="font-size: 18px; color: #333;">
+                🕰️ <strong>Visiting Hours:</strong> Monday – Sunday | 9:00 AM – 9:00 PM (IST)
+            </p>
+        </div>
+
+        <div style="margin-top: 30px;">
+            <p style="font-size: 18px; color: #333;"><strong>Follow Us:</strong></p>
+            <a href="#" style="margin: 0 10px; color: black; font-size: 22px; text-decoration: none;">🌐 Website</a>
+            <a href="#" style="margin: 0 10px; color: black; font-size: 22px; text-decoration: none;">📘 Facebook</a>
+            <a href="#" style="margin: 0 10px; color: black; font-size: 22px; text-decoration: none;">📷 Instagram</a>
+            <a href="#" style="margin: 0 10px; color: black; font-size: 22px; text-decoration: none;">🐦 Twitter</a>
+            <a href="#" style="margin: 0 10px; color: black; font-size: 22px; text-decoration: none;">▶️ YouTube</a>
+        </div>
+
+        <hr style="margin: 40px auto 20px; width: 80%; border-color: #f1d09b;">
+
+        <p style="font-size: 16px; color: black; ">
+            © 2025 Museum Explore. Designed with love and curiosity.
+        </p>
+    </footer>
+
+    <div class="btf">
+  <button class="back-to-home"><a href="../index.html">← Back to Home</a></button>
+  </div>
+
+
+    <script>
+        const content = [
+            `<h2>🏺 Egyptian Museum Reviews</h2>
+    ${generateReviews([
+                ["Aisha", 5, "Incredible artifacts and preserved mummies."],
+                ["Omar", 4, "Felt like I was walking through ancient times."],
+                ["Leila", 5, "The golden masks are mesmerizing."],
+                ["David", 4, "I recommend the 3D tomb section!"]
+            ])}`,
+
+            `<h2>🖼️ Louvre Museum Reviews</h2>
+    ${generateReviews([
+                ["Marie", 5, "Best museum I’ve ever visited."],
+                ["Luca", 4, "Huge collection, get the audio guide!"],
+                ["Sophie", 5, "Loved seeing the Mona Lisa."],
+                ["Andre", 4, "Busy but worth it."]
+            ])}`,
+
+            `<h2>🏯 Tokyo India Reviews</h2>
+    ${generateReviews([
+                ["Kenji", 5, "Loved the Buddhist and Indian fusion."],
+                ["Priya", 4, "Very calm and peaceful gallery."],
+                ["Raj", 5, "Felt deeply connected to my roots."],
+                ["Aya", 4, "Hidden gem in Tokyo."]
+            ])}`,
+
+            `<h2>🏛️ Pergamon Museum Reviews</h2>
+    ${generateReviews([
+                ["Jonas", 5, "Ishtar Gate is breathtaking!"],
+                ["Elena", 4, "Greek ruins beautifully displayed."],
+                ["Max", 5, "Felt like ancient Greece came alive."],
+                ["Sibel", 4, "Excellent cultural journey."]
+            ])}`,
+
+            `<h2>🕌 India Museum Reviews</h2>
+    ${generateReviews([
+                ["Arjun", 5, "Amazing Indian heritage displays."],
+                ["Meera", 4, "Mughal section is very detailed."],
+                ["Ravi", 5, "Every gallery told a story."],
+                ["Nandini", 4, "Loved the tribal culture exhibit."]
+            ])}`
+        ];
+
+        function generateReviews(reviews) {
+            return reviews.map(([name, stars, text]) => `
+    <div class="review">
+      <img src="https://i.pravatar.cc/60?u=${name}" alt="${name}">
+      <div class="review-content">
+        <div class="stars">${"★".repeat(stars)}${"☆".repeat(5 - stars)}</div>
+        <div class="name">${name}</div>
+        <p>${text}</p>
+      </div>
+    </div>
+  `).join('');
+        }
+
+        function openPortal(index) {
+            const box = document.getElementById('museumContent');
+            box.innerHTML = content[index];
+            box.style.display = "block";
+            box.scrollIntoView({ behavior: "smooth" });
+
+            const audio = new Audio("https://cdn.pixabay.com/download/audio/2023/01/30/audio_a22d01b7e4.mp3");
+            audio.play();
+        }
+    </script>
+
+</body>
+
+</html>
